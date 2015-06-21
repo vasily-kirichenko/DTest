@@ -48,5 +48,6 @@
     <Compile Include="VariadicFunc.d" />
     <Compile Include="StructuralTyping.d" />
     <Compile Include="GetterMixin.d" />
+    <Compile Include="HexLiteral.d" />
   </ItemGroup>
 </Project>
