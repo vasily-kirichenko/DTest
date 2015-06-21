@@ -47,5 +47,6 @@
     <Compile Include="Templates.d" />
     <Compile Include="VariadicFunc.d" />
     <Compile Include="StructuralTyping.d" />
+    <Compile Include="GetterMixin.d" />
   </ItemGroup>
 </Project>
