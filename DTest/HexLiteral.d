@@ -2,21 +2,19 @@
 
 import std.conv;
 import std.stdio;
-import std.conv;
-import std.array;
 import std.range;
 import std.algorithm;
 import std.string;
 
 struct HexString {
-	private static auto validChars() {
+	private static auto getValidChars() {
 		bool[dchar] res;
 		foreach(c; iota(0, 16, 1).map!(x => to!dchar(format("%01X", x))))
 			res[c] = true;
 		return res;
 	}
 	static bool isValid(const string str) {
-		auto validChars = validChars();
+		auto validChars = getValidChars();
 		return str.filter!(x => !(x in validChars)).count == 0;
 	}
 }
@@ -25,7 +23,7 @@ template sha1(string hexStr) {
 	static if (hexStr.length != 40)
 		static assert (0, "Hex string should be of length 40, but it's length is " 
 						  ~ to!string(hexStr.length) ~ ".");
-	static if (HexString.isValid(hexStr))
+	static if (!HexString.isValid(hexStr))
 		static assert (0, "Invalid char in hex string.");
 	enum sha1 = 
 		hexStr
@@ -35,5 +33,5 @@ template sha1(string hexStr) {
 }
 
 unittest {
-	auto x = sha1!"0102030405060708090A0B0C0D0E0F101213141v";
+	auto x = sha1!"0102030405060708090A0B0C0D0E0F1012131415";
 }

@@ -1,11 +1,8 @@
 ﻿<Properties StartupItem="DTest\DTest.dproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Unittest" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="DTest\HexLiteral.d">
     <Files>
-      <File FileName="DTest\VariadicFunc.d" Line="20" Column="4" />
-      <File FileName="DTest\StructuralTyping.d" Line="26" Column="2" />
-      <File FileName="DTest\GetterMixin.d" Line="34" Column="11" />
-      <File FileName="DTest\Templates.d" Line="3" Column="1" />
+      <File FileName="DTest\HexLiteral.d" Line="3" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
